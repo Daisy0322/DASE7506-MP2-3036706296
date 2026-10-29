@@ -1,0 +1,22 @@
+{
+  "seed": 0,
+  "method": "absolute_agree",
+  "embedding": "absolute",
+  "scalars": [
+    "agree",
+    "parseable"
+  ],
+  "lambda_rel": 1.0,
+  "n_train_pairs": 8271,
+  "dimensions": 1026,
+  "validation_hard": {
+    "correct": 288,
+    "n": 355,
+    "accuracy": 81.12676056338029
+  },
+  "validation_all": {
+    "correct": 731,
+    "n": 798,
+    "accuracy": 91.60401002506266
+  }
+}

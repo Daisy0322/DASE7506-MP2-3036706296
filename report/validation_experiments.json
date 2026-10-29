@@ -1,0 +1,847 @@
+{
+  "seed": 0,
+  "winner": {
+    "seed": 0,
+    "method": "embed_agree",
+    "embedding": "centered",
+    "scalars": [
+      "agree",
+      "parseable"
+    ],
+    "lambda_rel": 1.0,
+    "n_train_pairs": 8271,
+    "dimensions": 1026,
+    "selection_rule": "simplest feature set within one hard-validation question of the best score; numeric-answer residual, semantic-prototype residual, arithmetic penalty and expression-coverage override then chosen on hard validation",
+    "validation_hard": {
+      "correct": 297,
+      "n": 355,
+      "accuracy": 83.66197183098592
+    },
+    "validation_all": {
+      "correct": 740,
+      "n": 798,
+      "accuracy": 92.73182957393483
+    },
+    "numeric_residual_lambda_rel": 0.01,
+    "numeric_residual_scale": 0.5,
+    "numeric_validation_hard": {
+      "correct": 302,
+      "n": 355,
+      "accuracy": 85.07042253521126
+    },
+    "numeric_validation_all": {
+      "correct": 745,
+      "n": 798,
+      "accuracy": 93.35839598997494
+    },
+    "prototype_clusters": 32,
+    "prototype_lambda_rel": 0.1,
+    "prototype_scale": 0.175,
+    "prototype_train_cv_hard": {
+      "correct": 1705,
+      "n": 2114
+    },
+    "arithmetic_penalty": 0.2,
+    "coverage_min": 4,
+    "coverage_margin": 0.2,
+    "final_validation_hard": {
+      "correct": 307,
+      "n": 355,
+      "accuracy": 86.47887323943662
+    },
+    "final_validation_all": {
+      "correct": 750,
+      "n": 798,
+      "accuracy": 93.98496240601504
+    }
+  },
+  "repairs": {
+    "arithmetic_penalty": 0.2,
+    "coverage_min": 4,
+    "coverage_margin": 0.2,
+    "hard": {
+      "correct": 307,
+      "n": 355,
+      "accuracy": 86.47887323943662
+    },
+    "all": {
+      "correct": 750,
+      "n": 798,
+      "accuracy": 93.98496240601504
+    }
+  },
+  "asset_bytes": 147098,
+  "asset_sha256": {
+    "model.npz": "c6819b866f7324f5050fb5a299b26fc226c07dd37a37f1f6ab7165fc0c2c8913",
+    "config.json": "bed432f8ada4f78e14e336455e8991d8c4fe5428d44b028245056fdc6e00c679"
+  },
+  "weight_summary": {
+    "embedding_l2": 0.18321270343251317,
+    "scalar_weights_on_standardized_features": {
+      "agree": 0.1498010463489263,
+      "parseable": 0.0809905263771648
+    },
+    "hard_validation_score_ranges": {
+      "hard_mean_score_range_embedding": 0.6596894904873482,
+      "hard_mean_score_range_agree": 0.15719589673731207
+    }
+  },
+  "hard_validation_questions": 355,
+  "validation_questions": 798,
+  "disagreement_with_majority_on_hard_validation": {
+    "hard_questions_with_different_answers": 89,
+    "model_only_correct": 66,
+    "majority_only_correct": 14,
+    "both_correct": 0,
+    "neither_correct": 9
+  },
+  "hard_validation_margin_bins": [
+    {
+      "margin_low": 0.0012903484631766743,
+      "margin_high": 0.06485680008423991,
+      "correct": 75,
+      "n": 89,
+      "accuracy": 84.26966292134831
+    },
+    {
+      "margin_low": 0.06485680008423991,
+      "margin_high": 0.14381767247974753,
+      "correct": 67,
+      "n": 88,
+      "accuracy": 76.13636363636364
+    },
+    {
+      "margin_low": 0.14381767247974753,
+      "margin_high": 0.28139486821010307,
+      "correct": 78,
+      "n": 89,
+      "accuracy": 87.64044943820225
+    },
+    {
+      "margin_low": 0.28139486821010307,
+      "margin_high": 0.8059945829093899,
+      "correct": 77,
+      "n": 89,
+      "accuracy": 86.51685393258427
+    }
+  ],
+  "validation_cases": {
+    "model_fixes_majority": [
+      {
+        "id": "gsm8k:e0bce5638f28ceb61a610767278059aec4a642fdcd584761a2df8491c7ef6c46",
+        "question": "Jay went to watch a singer in a one hour 20 minutes concert.  If there was a 10-minute intermission, and all the songs were 5 minutes except for one song that lasted 10 minutes, how many songs did she sing?",
+        "reference_answer": "13",
+        "model_choice": 2,
+        "majority_choice": 0,
+        "candidates": [
+          {
+            "index": 0,
+            "parsed_answer": "16",
+            "ending": "and all songs except one lasted 5 minutes.\n\n- Total time of the concert: 1 hour 20 minutes = 90 minutes.\n- Intermission: 10 minutes.\n- Time spent singing: 90 - 10 = 80 minutes.\n- Number of songs: 80 / 5 = 16 songs.\n\n#### <numeric answer> 16"
+          },
+          {
+            "index": 1,
+            "parsed_answer": "14",
+            "ending": "e songs were **5 minutes** except for one song that lasted **10 minutes**.\n   - So, the total time for all songs is:\n     $$\n     70 = 6 \\times 10 + 10 = 70\n     $$\n   - Number of songs = $70 \\div 5 = 14$\n\n### Final Answer:\n$$\n\\boxed{14}\n$$"
+          },
+          {
+            "index": 2,
+            "parsed_answer": "13",
+            "ending": " songs is $ 5(x - 1) $ minutes.\n- The time for the **10-minute song** is 10 minutes.\n\nSo the total time is:\n\n$$\n5(x - 1) + 10 = 70\n$$\n\nSolving:\n\n$$\n5x - 5 + 10 = 70 \\\\\n5x + 5 = 70 \\\\\n5x = 65 \\\\\nx = 13\n$$\n\n### Final Answer:\n\n$$\n\\boxed{13}\n$$"
+          },
+          {
+            "index": 3,
+            "parsed_answer": "12",
+            "ending": "mber of songs**:  \n   The songs lasted 5 minutes except for one song that lasted 10 minutes. So, the total time is:  \n   $60 = 5 \\times 12 + 10$  \n   $60 = 60 + 10$ \u2705\n\n   Therefore, the number of songs is **12**.\n\n#### Final answer: **12**."
+          }
+        ]
+      },
+      {
+        "id": "gsm8k:8278949f5804b3684c922e60454437d60504a36370de6ec93d69445f5bfadb74",
+        "question": "Eddy\u2019s spider plant produces 2 baby plants 2 times a year.  After 4 years, how many baby plants will the mother plant have produced?",
+        "reference_answer": "16",
+        "model_choice": 1,
+        "majority_choice": 2,
+        "candidates": [
+          {
+            "index": 0,
+            "parsed_answer": "8",
+            "ending": "he number of baby plants per year\n- 2 baby plants per year.\n\n### Step 2: Multiply by the number of years\n- After 4 years:  \n  $ 2 \\text{ baby plants/year} \\times 4 \\text{ years} = 8 \\text{ baby plants} $\n\n### Final Answer:  \n$$\n\\boxed{8}\n$$"
+          },
+          {
+            "index": 1,
+            "parsed_answer": "16",
+            "ending": "ar, the plant produces 2 baby plants.\n- After 1 year: 2 baby plants  \n- After 2 years: 2 \u00d7 2 = 4 baby plants  \n- After 3 years: 2 \u00d7 4 = 8 baby plants  \n- After 4 years: 2 \u00d7 8 = **16 baby plants**\n\n### Final answer:\n\n#### <numeric answer> 16"
+          },
+          {
+            "index": 2,
+            "parsed_answer": "4",
+            "ending": "Eddy\u2019s spider plant produces 2 baby plants 2 times a year. After 4 years, the mother plant will have produced:\n\n$$\n2 \\text{ plants/year} \\times 2 \\text{ years} = \\boxed{4} \\text{ baby plants}\n$$\n\n#### <numeric answer> 4."
+          },
+          {
+            "index": 3,
+            "parsed_answer": "4",
+            "ending": "Eddy\u2019s spider plant produces 2 baby plants 2 times a year. After 4 years, the mother plant will have produced:\n\n$$\n2 \\text{ plants/year} \\times 2 \\text{ years} = \\boxed{4} \\text{ baby plants}\n$$\n\n#### <numeric answer> 4."
+          }
+        ]
+      },
+      {
+        "id": "gsm8k:d41771a33607bdaf7b3e00726d01e899fdd0d6e8b013369a93bcc90248c0c46b",
+        "question": "Tom buys 20 shares of a stock that costs $3 each.  He sells 10 of those shares for $4 each.  The rest of the shares end up doubling in value.  How much profit does he make?",
+        "reference_answer": "40",
+        "model_choice": 2,
+        "majority_choice": 0,
+        "candidates": [
+          {
+            "index": 0,
+            "parsed_answer": "100",
+            "ending": "times 2 = 60 \\text{ dollars}\n  $$\n\n---\n\n### Step 3: Total profit\n\n- Profit from the 10 shares: **$40**\n- Profit from the remaining 10 shares: **$60**\n- Total profit:\n  $$\n  40 + 60 = \\boxed{100}\n  $$\n\n---\n\n### \u2705 Final Answer:\n#### **$100**."
+          },
+          {
+            "index": 1,
+            "parsed_answer": "80",
+            "ending": " \\text{ dollars}\n$$\n\nNow, calculate the total profit:\n\n$$\n\\text{Profit} = \\text{Total Cost} - \\text{Total Sale} + \\text{Value of Doubled Shares}\n$$\n\n$$\n\\text{Profit} = 60 - 40 + 60 = 80 \\text{ dollars}\n$$\n\n### Final Answer:\n$$\n\\boxed{80}\n$$"
+          },
+          {
+            "index": 2,
+            "parsed_answer": "40",
+            "ending": "0 \\text{ dollars}\n$$\n\nNow, calculate his total profit:\n\n$$\n\\text{Total profit} = \\text{Sale proceeds} + \\text{Value of remaining shares} - \\text{Original cost}\n$$\n$$\n= 40 + 60 - 60 = 40 \\text{ dollars}\n$$\n\n### Final Answer:\n$$\n\\boxed{40}\n$$"
+          },
+          {
+            "index": 3,
+            "parsed_answer": "100",
+            "ending": "uble in value, so they now cost **$3 \u00d7 2 = $6 each**.\n\nNow calculate the total profit:\n\n- Total profit = (Selling price - Cost price) \u00d7 number of shares sold  \n  = ($40 - $30) \u00d7 10  \n  = $10 \u00d7 10  \n  = **$100**\n\n### Final Answer:\n#### $100."
+          }
+        ]
+      }
+    ],
+    "model_breaks_majority": [
+      {
+        "id": "gsm8k:c7e31f077e16c06ce1854ed8edc5aaf8be1c629e558c151b7d32b78cb867f158",
+        "question": "Megan bought 2 dozen eggs. As she was walking to her car, she dropped a tray of eggs. 3 eggs broke, and twice as many cracked. What is the difference between the eggs that are still in perfect condition and those that are cracked?",
+        "reference_answer": "9",
+        "model_choice": 2,
+        "majority_choice": 0,
+        "candidates": [
+          {
+            "index": 0,
+            "parsed_answer": "9",
+            "ending": " **3 eggs** broke.\n- **Twice as many cracked** = $2 \\times 3 = 6$ eggs cracked.\n\nSo, the **perfect condition** eggs = $24 - 3 - 6 = 15$.\n\nThe **difference** between perfect condition and cracked eggs = $15 - 6 = 9$.\n\n#### <numeric answer> 9"
+          },
+          {
+            "index": 1,
+            "parsed_answer": "18",
+            "ending": "ny cracked**.\n\nSo, **3 cracked eggs**.  \nThe number of eggs still in **perfect condition** is:\n\n$$\n24 - 3 = 21\n$$\n\nThe difference between the eggs still in perfect condition and those cracked is:\n\n$$\n21 - 3 = 18\n$$\n\n#### <numeric answer> 18"
+          },
+          {
+            "index": 2,
+            "parsed_answer": "6",
+            "ending": "cracked**.\n\n- Perfect condition: $ 24 - 3 - 6 = 15 $ eggs.\n- Cracked: $ 3 + 6 = 9 $ eggs.\n\nThe difference between the eggs that are still in perfect condition and those that are cracked is:\n\n$$\n15 - 9 = \\boxed{6}\n$$\n\n#### <numeric answer> 6"
+          },
+          {
+            "index": 3,
+            "parsed_answer": null,
+            "ending": "need to find the **difference between the perfect condition eggs** and the **cracked eggs**.\n\n- Perfect condition eggs: $ 24 - 3 - 6 = 15 $ eggs.\n- Cracked eggs: $ 6 $ eggs.\n- Perfect condition eggs: $ 15 $ eggs.\n\n### Final answer:  \n**15**"
+          }
+        ]
+      },
+      {
+        "id": "gsm8k:733c2ed7820a3d0de5448744f970515a50ffbbcad6769f064efc78c7f15280a3",
+        "question": "You can buy 4 apples or 1 watermelon for the same price. You bought 36 fruits evenly split between oranges, apples and watermelons, and the price of 1 orange is $0.50. How much does 1 apple cost if your total bill was $66?",
+        "reference_answer": "1",
+        "model_choice": 3,
+        "majority_choice": 1,
+        "candidates": [
+          {
+            "index": 0,
+            "parsed_answer": null,
+            "ending": " y + 4a z = 66\n$$\n\n---\n\n### Step 3: Use the fact that the apples and watermelons are in the same ratio\n\nFrom the problem: **4 apples = 1 watermelon**\n\nSo, the number of apples and watermelons are proportional to 1:4\n\nLet\u2019s assume the number"
+          },
+          {
+            "index": 1,
+            "parsed_answer": "1",
+            "ending": "nges: 12 \u00d7 $0.50 = $6  \n- Cost of apples: 12 \u00d7 $a = $12a  \n- Cost of watermelons: 12 \u00d7 $4a = $48a  \n\nTotal bill = $6 + $12a + $48a = $6 + $60a = $66\n\nSolve for $a$:\n\n$$\n6 + 60a = 66 \\\\\n60a = 60 \\\\\na = 1\n$$\n\n### Final Answer:\n$$\n\\boxed{1}\n$$"
+          },
+          {
+            "index": 2,
+            "parsed_answer": "133/100",
+            "ending": "rom earlier:\n\n- $ y = 4x $\n- $ z = 0.50 $\n\nNow plug into the total bill:\n\n$$\n66 = 36x + 36(0.50) = 36x + 18\n$$\n\n$$\n66 - 18 = 36x \\Rightarrow 48 = 36x \\Rightarrow x = \\frac{48}{36} = \\frac{4}{3}\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{1.33}\n$$"
+          },
+          {
+            "index": 3,
+            "parsed_answer": "1/10",
+            "ending": " + 12 \\times x + 12 \\times 4x = 60 + 12x + 48x = 60 + 60x\n$$\n\nWe are told the total bill is $66:\n\n$$\n60 + 60x = 66\n$$\n\n---\n\n### Step 3: Solve for $x$\n\n$$\n60x = 6\n$$\n$$\nx = \\frac{6}{60} = 0.10\n$$\n\n---\n\n### \u2705 Final Answer:\n\n$$\n\\boxed{0.10}\n$$"
+          }
+        ]
+      }
+    ]
+  },
+  "experiments": [
+    {
+      "method": "majority",
+      "learned": false,
+      "hard": {
+        "correct": 245,
+        "n": 355,
+        "accuracy": 69.01408450704226
+      },
+      "all": {
+        "correct": 688,
+        "n": 798,
+        "accuracy": 86.2155388471178
+      }
+    },
+    {
+      "method": "longest",
+      "learned": false,
+      "hard": {
+        "correct": 212,
+        "n": 355,
+        "accuracy": 59.71830985915493
+      },
+      "all": {
+        "correct": 655,
+        "n": 798,
+        "accuracy": 82.08020050125313
+      }
+    },
+    {
+      "method": "coverage",
+      "learned": false,
+      "hard": {
+        "correct": 215,
+        "n": 355,
+        "accuracy": 60.563380281690144
+      },
+      "all": {
+        "correct": 658,
+        "n": 798,
+        "accuracy": 82.45614035087719
+      }
+    },
+    {
+      "method": "first",
+      "learned": false,
+      "hard": {
+        "correct": 209,
+        "n": 355,
+        "accuracy": 58.87323943661972
+      },
+      "all": {
+        "correct": 652,
+        "n": 798,
+        "accuracy": 81.70426065162907
+      }
+    },
+    {
+      "method": "agree",
+      "learned": true,
+      "lambda_rel": 0.001,
+      "n_pairs": 8271,
+      "dimensions": 2,
+      "hard": {
+        "correct": 245,
+        "n": 355,
+        "accuracy": 69.01408450704226
+      },
+      "all": {
+        "correct": 688,
+        "n": 798,
+        "accuracy": 86.2155388471178
+      }
+    },
+    {
+      "method": "agree",
+      "learned": true,
+      "lambda_rel": 0.01,
+      "n_pairs": 8271,
+      "dimensions": 2,
+      "hard": {
+        "correct": 245,
+        "n": 355,
+        "accuracy": 69.01408450704226
+      },
+      "all": {
+        "correct": 688,
+        "n": 798,
+        "accuracy": 86.2155388471178
+      }
+    },
+    {
+      "method": "agree",
+      "learned": true,
+      "lambda_rel": 0.1,
+      "n_pairs": 8271,
+      "dimensions": 2,
+      "hard": {
+        "correct": 245,
+        "n": 355,
+        "accuracy": 69.01408450704226
+      },
+      "all": {
+        "correct": 688,
+        "n": 798,
+        "accuracy": 86.2155388471178
+      }
+    },
+    {
+      "method": "agree",
+      "learned": true,
+      "lambda_rel": 1.0,
+      "n_pairs": 8271,
+      "dimensions": 2,
+      "hard": {
+        "correct": 245,
+        "n": 355,
+        "accuracy": 69.01408450704226
+      },
+      "all": {
+        "correct": 688,
+        "n": 798,
+        "accuracy": 86.2155388471178
+      }
+    },
+    {
+      "method": "agree",
+      "learned": true,
+      "lambda_rel": 10.0,
+      "n_pairs": 8271,
+      "dimensions": 2,
+      "hard": {
+        "correct": 245,
+        "n": 355,
+        "accuracy": 69.01408450704226
+      },
+      "all": {
+        "correct": 688,
+        "n": 798,
+        "accuracy": 86.2155388471178
+      }
+    },
+    {
+      "method": "embed",
+      "learned": true,
+      "lambda_rel": 0.001,
+      "n_pairs": 8271,
+      "dimensions": 1024,
+      "hard": {
+        "correct": 278,
+        "n": 355,
+        "accuracy": 78.30985915492958
+      },
+      "all": {
+        "correct": 721,
+        "n": 798,
+        "accuracy": 90.35087719298245
+      }
+    },
+    {
+      "method": "embed",
+      "learned": true,
+      "lambda_rel": 0.01,
+      "n_pairs": 8271,
+      "dimensions": 1024,
+      "hard": {
+        "correct": 280,
+        "n": 355,
+        "accuracy": 78.87323943661971
+      },
+      "all": {
+        "correct": 723,
+        "n": 798,
+        "accuracy": 90.6015037593985
+      }
+    },
+    {
+      "method": "embed",
+      "learned": true,
+      "lambda_rel": 0.1,
+      "n_pairs": 8271,
+      "dimensions": 1024,
+      "hard": {
+        "correct": 279,
+        "n": 355,
+        "accuracy": 78.59154929577464
+      },
+      "all": {
+        "correct": 722,
+        "n": 798,
+        "accuracy": 90.47619047619048
+      }
+    },
+    {
+      "method": "embed",
+      "learned": true,
+      "lambda_rel": 1.0,
+      "n_pairs": 8271,
+      "dimensions": 1024,
+      "hard": {
+        "correct": 280,
+        "n": 355,
+        "accuracy": 78.87323943661971
+      },
+      "all": {
+        "correct": 723,
+        "n": 798,
+        "accuracy": 90.6015037593985
+      }
+    },
+    {
+      "method": "embed",
+      "learned": true,
+      "lambda_rel": 10.0,
+      "n_pairs": 8271,
+      "dimensions": 1024,
+      "hard": {
+        "correct": 282,
+        "n": 355,
+        "accuracy": 79.43661971830986
+      },
+      "all": {
+        "correct": 725,
+        "n": 798,
+        "accuracy": 90.85213032581454
+      }
+    },
+    {
+      "method": "embed_agree",
+      "learned": true,
+      "lambda_rel": 0.001,
+      "n_pairs": 8271,
+      "dimensions": 1026,
+      "hard": {
+        "correct": 279,
+        "n": 355,
+        "accuracy": 78.59154929577464
+      },
+      "all": {
+        "correct": 722,
+        "n": 798,
+        "accuracy": 90.47619047619048
+      }
+    },
+    {
+      "method": "embed_agree",
+      "learned": true,
+      "lambda_rel": 0.01,
+      "n_pairs": 8271,
+      "dimensions": 1026,
+      "hard": {
+        "correct": 278,
+        "n": 355,
+        "accuracy": 78.30985915492958
+      },
+      "all": {
+        "correct": 721,
+        "n": 798,
+        "accuracy": 90.35087719298245
+      }
+    },
+    {
+      "method": "embed_agree",
+      "learned": true,
+      "lambda_rel": 0.1,
+      "n_pairs": 8271,
+      "dimensions": 1026,
+      "hard": {
+        "correct": 282,
+        "n": 355,
+        "accuracy": 79.43661971830986
+      },
+      "all": {
+        "correct": 725,
+        "n": 798,
+        "accuracy": 90.85213032581454
+      }
+    },
+    {
+      "method": "embed_agree",
+      "learned": true,
+      "lambda_rel": 1.0,
+      "n_pairs": 8271,
+      "dimensions": 1026,
+      "hard": {
+        "correct": 297,
+        "n": 355,
+        "accuracy": 83.66197183098592
+      },
+      "all": {
+        "correct": 740,
+        "n": 798,
+        "accuracy": 92.73182957393483
+      }
+    },
+    {
+      "method": "embed_agree",
+      "learned": true,
+      "lambda_rel": 10.0,
+      "n_pairs": 8271,
+      "dimensions": 1026,
+      "hard": {
+        "correct": 285,
+        "n": 355,
+        "accuracy": 80.28169014084507
+      },
+      "all": {
+        "correct": 728,
+        "n": 798,
+        "accuracy": 91.2280701754386
+      }
+    },
+    {
+      "method": "absolute_agree",
+      "learned": true,
+      "lambda_rel": 0.001,
+      "n_pairs": 8271,
+      "dimensions": 1026,
+      "hard": {
+        "correct": 278,
+        "n": 355,
+        "accuracy": 78.30985915492958
+      },
+      "all": {
+        "correct": 721,
+        "n": 798,
+        "accuracy": 90.35087719298245
+      }
+    },
+    {
+      "method": "absolute_agree",
+      "learned": true,
+      "lambda_rel": 0.01,
+      "n_pairs": 8271,
+      "dimensions": 1026,
+      "hard": {
+        "correct": 282,
+        "n": 355,
+        "accuracy": 79.43661971830986
+      },
+      "all": {
+        "correct": 725,
+        "n": 798,
+        "accuracy": 90.85213032581454
+      }
+    },
+    {
+      "method": "absolute_agree",
+      "learned": true,
+      "lambda_rel": 0.1,
+      "n_pairs": 8271,
+      "dimensions": 1026,
+      "hard": {
+        "correct": 287,
+        "n": 355,
+        "accuracy": 80.84507042253522
+      },
+      "all": {
+        "correct": 730,
+        "n": 798,
+        "accuracy": 91.47869674185463
+      }
+    },
+    {
+      "method": "absolute_agree",
+      "learned": true,
+      "lambda_rel": 1.0,
+      "n_pairs": 8271,
+      "dimensions": 1026,
+      "hard": {
+        "correct": 288,
+        "n": 355,
+        "accuracy": 81.12676056338029
+      },
+      "all": {
+        "correct": 731,
+        "n": 798,
+        "accuracy": 91.60401002506266
+      }
+    },
+    {
+      "method": "absolute_agree",
+      "learned": true,
+      "lambda_rel": 10.0,
+      "n_pairs": 8271,
+      "dimensions": 1026,
+      "hard": {
+        "correct": 275,
+        "n": 355,
+        "accuracy": 77.46478873239437
+      },
+      "all": {
+        "correct": 718,
+        "n": 798,
+        "accuracy": 89.97493734335839
+      }
+    },
+    {
+      "method": "embed_agree_cov",
+      "learned": true,
+      "lambda_rel": 0.001,
+      "n_pairs": 8271,
+      "dimensions": 1027,
+      "hard": {
+        "correct": 278,
+        "n": 355,
+        "accuracy": 78.30985915492958
+      },
+      "all": {
+        "correct": 721,
+        "n": 798,
+        "accuracy": 90.35087719298245
+      }
+    },
+    {
+      "method": "embed_agree_cov",
+      "learned": true,
+      "lambda_rel": 0.01,
+      "n_pairs": 8271,
+      "dimensions": 1027,
+      "hard": {
+        "correct": 278,
+        "n": 355,
+        "accuracy": 78.30985915492958
+      },
+      "all": {
+        "correct": 721,
+        "n": 798,
+        "accuracy": 90.35087719298245
+      }
+    },
+    {
+      "method": "embed_agree_cov",
+      "learned": true,
+      "lambda_rel": 0.1,
+      "n_pairs": 8271,
+      "dimensions": 1027,
+      "hard": {
+        "correct": 283,
+        "n": 355,
+        "accuracy": 79.71830985915493
+      },
+      "all": {
+        "correct": 726,
+        "n": 798,
+        "accuracy": 90.97744360902256
+      }
+    },
+    {
+      "method": "embed_agree_cov",
+      "learned": true,
+      "lambda_rel": 1.0,
+      "n_pairs": 8271,
+      "dimensions": 1027,
+      "hard": {
+        "correct": 297,
+        "n": 355,
+        "accuracy": 83.66197183098592
+      },
+      "all": {
+        "correct": 740,
+        "n": 798,
+        "accuracy": 92.73182957393483
+      }
+    },
+    {
+      "method": "embed_agree_cov",
+      "learned": true,
+      "lambda_rel": 10.0,
+      "n_pairs": 8271,
+      "dimensions": 1027,
+      "hard": {
+        "correct": 285,
+        "n": 355,
+        "accuracy": 80.28169014084507
+      },
+      "all": {
+        "correct": 728,
+        "n": 798,
+        "accuracy": 91.2280701754386
+      }
+    },
+    {
+      "method": "embed_agree_len",
+      "learned": true,
+      "lambda_rel": 0.001,
+      "n_pairs": 8271,
+      "dimensions": 1027,
+      "hard": {
+        "correct": 277,
+        "n": 355,
+        "accuracy": 78.02816901408451
+      },
+      "all": {
+        "correct": 720,
+        "n": 798,
+        "accuracy": 90.22556390977444
+      }
+    },
+    {
+      "method": "embed_agree_len",
+      "learned": true,
+      "lambda_rel": 0.01,
+      "n_pairs": 8271,
+      "dimensions": 1027,
+      "hard": {
+        "correct": 278,
+        "n": 355,
+        "accuracy": 78.30985915492958
+      },
+      "all": {
+        "correct": 721,
+        "n": 798,
+        "accuracy": 90.35087719298245
+      }
+    },
+    {
+      "method": "embed_agree_len",
+      "learned": true,
+      "lambda_rel": 0.1,
+      "n_pairs": 8271,
+      "dimensions": 1027,
+      "hard": {
+        "correct": 282,
+        "n": 355,
+        "accuracy": 79.43661971830986
+      },
+      "all": {
+        "correct": 725,
+        "n": 798,
+        "accuracy": 90.85213032581454
+      }
+    },
+    {
+      "method": "embed_agree_len",
+      "learned": true,
+      "lambda_rel": 1.0,
+      "n_pairs": 8271,
+      "dimensions": 1027,
+      "hard": {
+        "correct": 297,
+        "n": 355,
+        "accuracy": 83.66197183098592
+      },
+      "all": {
+        "correct": 740,
+        "n": 798,
+        "accuracy": 92.73182957393483
+      }
+    },
+    {
+      "method": "embed_agree_len",
+      "learned": true,
+      "lambda_rel": 10.0,
+      "n_pairs": 8271,
+      "dimensions": 1027,
+      "hard": {
+        "correct": 285,
+        "n": 355,
+        "accuracy": 80.28169014084507
+      },
+      "all": {
+        "correct": 728,
+        "n": 798,
+        "accuracy": 91.2280701754386
+      }
+    }
+  ]
+}

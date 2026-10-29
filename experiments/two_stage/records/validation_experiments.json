@@ -1,0 +1,1231 @@
+{
+  "seed": 0,
+  "folds": 5,
+  "hard_train_questions": 2114,
+  "train_questions": 4755,
+  "hard_validation_questions": 355,
+  "validation_questions": 798,
+  "selection_data": "five-fold cross-validation on the training split; validation is a held-out check",
+  "test_used_for_selection": false,
+  "rules_validation": [
+    {
+      "method": "majority",
+      "hard": {
+        "correct": 245,
+        "n": 355,
+        "accuracy": 69.01408450704226
+      },
+      "all": {
+        "correct": 688,
+        "n": 798,
+        "accuracy": 86.2155388471178
+      }
+    },
+    {
+      "method": "longest",
+      "hard": {
+        "correct": 212,
+        "n": 355,
+        "accuracy": 59.71830985915493
+      },
+      "all": {
+        "correct": 655,
+        "n": 798,
+        "accuracy": 82.08020050125313
+      }
+    },
+    {
+      "method": "coverage",
+      "hard": {
+        "correct": 215,
+        "n": 355,
+        "accuracy": 60.563380281690144
+      },
+      "all": {
+        "correct": 658,
+        "n": 798,
+        "accuracy": 82.45614035087719
+      }
+    },
+    {
+      "method": "first",
+      "hard": {
+        "correct": 209,
+        "n": 355,
+        "accuracy": 58.87323943661972
+      },
+      "all": {
+        "correct": 652,
+        "n": 798,
+        "accuracy": 81.70426065162907
+      }
+    }
+  ],
+  "stage1_grid": [
+    {
+      "mode": "centered",
+      "lambda_rel": 0.03,
+      "n_pairs": 6516,
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1711,
+          "n": 2114,
+          "accuracy": 80.93661305581836
+        },
+        {
+          "correct": 1687,
+          "n": 2114,
+          "accuracy": 79.80132450331126
+        },
+        {
+          "correct": 1699,
+          "n": 2114,
+          "accuracy": 80.36896877956481
+        }
+      ],
+      "train_cv_hard_total": 5097,
+      "validation_hard": {
+        "correct": 294,
+        "n": 355,
+        "accuracy": 82.8169014084507
+      },
+      "validation_all": {
+        "correct": 737,
+        "n": 798,
+        "accuracy": 92.35588972431077
+      }
+    },
+    {
+      "mode": "centered",
+      "lambda_rel": 0.1,
+      "n_pairs": 6516,
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1724,
+          "n": 2114,
+          "accuracy": 81.5515610217597
+        },
+        {
+          "correct": 1707,
+          "n": 2114,
+          "accuracy": 80.74739829706716
+        },
+        {
+          "correct": 1709,
+          "n": 2114,
+          "accuracy": 80.84200567644277
+        }
+      ],
+      "train_cv_hard_total": 5140,
+      "validation_hard": {
+        "correct": 295,
+        "n": 355,
+        "accuracy": 83.09859154929578
+      },
+      "validation_all": {
+        "correct": 738,
+        "n": 798,
+        "accuracy": 92.4812030075188
+      }
+    },
+    {
+      "mode": "centered",
+      "lambda_rel": 0.3,
+      "n_pairs": 6516,
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1711,
+          "n": 2114,
+          "accuracy": 80.93661305581836
+        },
+        {
+          "correct": 1714,
+          "n": 2114,
+          "accuracy": 81.07852412488174
+        },
+        {
+          "correct": 1707,
+          "n": 2114,
+          "accuracy": 80.74739829706716
+        }
+      ],
+      "train_cv_hard_total": 5132,
+      "validation_hard": {
+        "correct": 299,
+        "n": 355,
+        "accuracy": 84.22535211267606
+      },
+      "validation_all": {
+        "correct": 742,
+        "n": 798,
+        "accuracy": 92.98245614035088
+      }
+    },
+    {
+      "mode": "centered",
+      "lambda_rel": 1.0,
+      "n_pairs": 6516,
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1688,
+          "n": 2114,
+          "accuracy": 79.84862819299906
+        },
+        {
+          "correct": 1703,
+          "n": 2114,
+          "accuracy": 80.55818353831599
+        },
+        {
+          "correct": 1690,
+          "n": 2114,
+          "accuracy": 79.94323557237465
+        }
+      ],
+      "train_cv_hard_total": 5081,
+      "validation_hard": {
+        "correct": 296,
+        "n": 355,
+        "accuracy": 83.38028169014085
+      },
+      "validation_all": {
+        "correct": 739,
+        "n": 798,
+        "accuracy": 92.60651629072682
+      }
+    },
+    {
+      "mode": "absolute",
+      "lambda_rel": 0.03,
+      "n_pairs": 6516,
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1695,
+          "n": 2114,
+          "accuracy": 80.17975402081362
+        },
+        {
+          "correct": 1686,
+          "n": 2114,
+          "accuracy": 79.75402081362347
+        },
+        {
+          "correct": 1691,
+          "n": 2114,
+          "accuracy": 79.99053926206244
+        }
+      ],
+      "train_cv_hard_total": 5072,
+      "validation_hard": {
+        "correct": 292,
+        "n": 355,
+        "accuracy": 82.25352112676056
+      },
+      "validation_all": {
+        "correct": 735,
+        "n": 798,
+        "accuracy": 92.10526315789474
+      }
+    },
+    {
+      "mode": "absolute",
+      "lambda_rel": 0.1,
+      "n_pairs": 6516,
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1686,
+          "n": 2114,
+          "accuracy": 79.75402081362347
+        },
+        {
+          "correct": 1676,
+          "n": 2114,
+          "accuracy": 79.28098391674551
+        },
+        {
+          "correct": 1687,
+          "n": 2114,
+          "accuracy": 79.80132450331126
+        }
+      ],
+      "train_cv_hard_total": 5049,
+      "validation_hard": {
+        "correct": 290,
+        "n": 355,
+        "accuracy": 81.69014084507042
+      },
+      "validation_all": {
+        "correct": 733,
+        "n": 798,
+        "accuracy": 91.8546365914787
+      }
+    },
+    {
+      "mode": "absolute",
+      "lambda_rel": 0.3,
+      "n_pairs": 6516,
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1672,
+          "n": 2114,
+          "accuracy": 79.09176915799432
+        },
+        {
+          "correct": 1675,
+          "n": 2114,
+          "accuracy": 79.2336802270577
+        },
+        {
+          "correct": 1673,
+          "n": 2114,
+          "accuracy": 79.13907284768212
+        }
+      ],
+      "train_cv_hard_total": 5020,
+      "validation_hard": {
+        "correct": 294,
+        "n": 355,
+        "accuracy": 82.8169014084507
+      },
+      "validation_all": {
+        "correct": 737,
+        "n": 798,
+        "accuracy": 92.35588972431077
+      }
+    },
+    {
+      "mode": "absolute",
+      "lambda_rel": 1.0,
+      "n_pairs": 6516,
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1649,
+          "n": 2114,
+          "accuracy": 78.00378429517502
+        },
+        {
+          "correct": 1649,
+          "n": 2114,
+          "accuracy": 78.00378429517502
+        },
+        {
+          "correct": 1653,
+          "n": 2114,
+          "accuracy": 78.1929990539262
+        }
+      ],
+      "train_cv_hard_total": 4951,
+      "validation_hard": {
+        "correct": 288,
+        "n": 355,
+        "accuracy": 81.12676056338029
+      },
+      "validation_all": {
+        "correct": 731,
+        "n": 798,
+        "accuracy": 91.60401002506266
+      }
+    }
+  ],
+  "stage1_lambda": {
+    "centered": 0.1,
+    "absolute": 0.03
+  },
+  "stage2_grid": [
+    {
+      "stage2_lambda": 0.03,
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1740,
+          "n": 2114,
+          "accuracy": 82.30842005676443
+        },
+        {
+          "correct": 1729,
+          "n": 2114,
+          "accuracy": 81.78807947019868
+        },
+        {
+          "correct": 1735,
+          "n": 2114,
+          "accuracy": 82.07190160832545
+        }
+      ],
+      "train_cv_hard_total": 5204,
+      "validation_hard": {
+        "correct": 299,
+        "n": 355,
+        "accuracy": 84.22535211267606
+      },
+      "validation_all": {
+        "correct": 742,
+        "n": 798,
+        "accuracy": 92.98245614035088
+      }
+    },
+    {
+      "stage2_lambda": 0.1,
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1739,
+          "n": 2114,
+          "accuracy": 82.26111636707664
+        },
+        {
+          "correct": 1725,
+          "n": 2114,
+          "accuracy": 81.59886471144749
+        },
+        {
+          "correct": 1726,
+          "n": 2114,
+          "accuracy": 81.64616840113528
+        }
+      ],
+      "train_cv_hard_total": 5190,
+      "validation_hard": {
+        "correct": 302,
+        "n": 355,
+        "accuracy": 85.07042253521126
+      },
+      "validation_all": {
+        "correct": 745,
+        "n": 798,
+        "accuracy": 93.35839598997494
+      }
+    },
+    {
+      "stage2_lambda": 0.3,
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1719,
+          "n": 2114,
+          "accuracy": 81.31504257332072
+        },
+        {
+          "correct": 1723,
+          "n": 2114,
+          "accuracy": 81.5042573320719
+        },
+        {
+          "correct": 1725,
+          "n": 2114,
+          "accuracy": 81.59886471144749
+        }
+      ],
+      "train_cv_hard_total": 5167,
+      "validation_hard": {
+        "correct": 296,
+        "n": 355,
+        "accuracy": 83.38028169014085
+      },
+      "validation_all": {
+        "correct": 739,
+        "n": 798,
+        "accuracy": 92.60651629072682
+      }
+    },
+    {
+      "stage2_lambda": 1.0,
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1690,
+          "n": 2114,
+          "accuracy": 79.94323557237465
+        },
+        {
+          "correct": 1691,
+          "n": 2114,
+          "accuracy": 79.99053926206244
+        },
+        {
+          "correct": 1694,
+          "n": 2114,
+          "accuracy": 80.13245033112582
+        }
+      ],
+      "train_cv_hard_total": 5075,
+      "validation_hard": {
+        "correct": 291,
+        "n": 355,
+        "accuracy": 81.97183098591549
+      },
+      "validation_all": {
+        "correct": 734,
+        "n": 798,
+        "accuracy": 91.97994987468671
+      }
+    }
+  ],
+  "ablations": {
+    "stage1_centered": {
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1724,
+          "n": 2114,
+          "accuracy": 81.5515610217597
+        },
+        {
+          "correct": 1707,
+          "n": 2114,
+          "accuracy": 80.74739829706716
+        },
+        {
+          "correct": 1709,
+          "n": 2114,
+          "accuracy": 80.84200567644277
+        }
+      ],
+      "train_cv_hard_total": 5140,
+      "validation_hard": {
+        "correct": 295,
+        "n": 355,
+        "accuracy": 83.09859154929578
+      },
+      "validation_all": {
+        "correct": 738,
+        "n": 798,
+        "accuracy": 92.4812030075188
+      }
+    },
+    "stage1_absolute": {
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1695,
+          "n": 2114,
+          "accuracy": 80.17975402081362
+        },
+        {
+          "correct": 1686,
+          "n": 2114,
+          "accuracy": 79.75402081362347
+        },
+        {
+          "correct": 1691,
+          "n": 2114,
+          "accuracy": 79.99053926206244
+        }
+      ],
+      "train_cv_hard_total": 5072,
+      "validation_hard": {
+        "correct": 292,
+        "n": 355,
+        "accuracy": 82.25352112676056
+      },
+      "validation_all": {
+        "correct": 735,
+        "n": 798,
+        "accuracy": 92.10526315789474
+      }
+    },
+    "stage2_centered_only": {
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1736,
+          "n": 2114,
+          "accuracy": 82.11920529801324
+        },
+        {
+          "correct": 1731,
+          "n": 2114,
+          "accuracy": 81.88268684957427
+        },
+        {
+          "correct": 1729,
+          "n": 2114,
+          "accuracy": 81.78807947019868
+        }
+      ],
+      "train_cv_hard_total": 5196,
+      "validation_hard": {
+        "correct": 300,
+        "n": 355,
+        "accuracy": 84.50704225352112
+      },
+      "validation_all": {
+        "correct": 743,
+        "n": 798,
+        "accuracy": 93.10776942355889
+      }
+    },
+    "stage2_no_trace": {
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1711,
+          "n": 2114,
+          "accuracy": 80.93661305581836
+        },
+        {
+          "correct": 1707,
+          "n": 2114,
+          "accuracy": 80.74739829706716
+        },
+        {
+          "correct": 1718,
+          "n": 2114,
+          "accuracy": 81.26773888363293
+        }
+      ],
+      "train_cv_hard_total": 5136,
+      "validation_hard": {
+        "correct": 298,
+        "n": 355,
+        "accuracy": 83.94366197183099
+      },
+      "validation_all": {
+        "correct": 741,
+        "n": 798,
+        "accuracy": 92.85714285714286
+      }
+    },
+    "stage2_no_numeric": {
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1720,
+          "n": 2114,
+          "accuracy": 81.36234626300852
+        },
+        {
+          "correct": 1705,
+          "n": 2114,
+          "accuracy": 80.65279091769158
+        },
+        {
+          "correct": 1698,
+          "n": 2114,
+          "accuracy": 80.32166508987702
+        }
+      ],
+      "train_cv_hard_total": 5123,
+      "validation_hard": {
+        "correct": 293,
+        "n": 355,
+        "accuracy": 82.53521126760563
+      },
+      "validation_all": {
+        "correct": 736,
+        "n": 798,
+        "accuracy": 92.23057644110276
+      }
+    },
+    "stage2_scores_only": {
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1695,
+          "n": 2114,
+          "accuracy": 80.17975402081362
+        },
+        {
+          "correct": 1691,
+          "n": 2114,
+          "accuracy": 79.99053926206244
+        },
+        {
+          "correct": 1692,
+          "n": 2114,
+          "accuracy": 80.03784295175024
+        }
+      ],
+      "train_cv_hard_total": 5078,
+      "validation_hard": {
+        "correct": 289,
+        "n": 355,
+        "accuracy": 81.40845070422536
+      },
+      "validation_all": {
+        "correct": 732,
+        "n": 798,
+        "accuracy": 91.72932330827068
+      }
+    }
+  },
+  "final": {
+    "config": {
+      "seed": 0,
+      "method": "two-stage pairwise logistic ranker",
+      "stage1_modes": [
+        "centered",
+        "absolute"
+      ],
+      "stage1_lambda": {
+        "centered": 0.1,
+        "absolute": 0.03
+      },
+      "stage2": true,
+      "stage2_blocks": [
+        "trace",
+        "numeric"
+      ],
+      "stage2_lambda": 0.03,
+      "stage2_dimensions": 166,
+      "stage2_n_pairs": 6516,
+      "trace_feature_names": [
+        "log_len",
+        "rel_len",
+        "len_rank",
+        "n_nums",
+        "n_distinct_nums",
+        "q_cov",
+        "novel_frac",
+        "novel_shared",
+        "novel_unshared_count",
+        "novel_jaccard_mean",
+        "novel_jaccard_max",
+        "eq_errors",
+        "eq_errors_any",
+        "n_eq",
+        "eq_err_rate",
+        "ans_in_body",
+        "ans_in_question",
+        "ans_shared_cands",
+        "ans_is_last_num",
+        "ans_count_in_text",
+        "n_boxed",
+        "n_hash",
+        "n_lines",
+        "n_sent",
+        "has_question_restate",
+        "w_wait",
+        "w_but",
+        "w_however",
+        "w_actually",
+        "w_recheck",
+        "w_mistake",
+        "w_assume",
+        "w_approx",
+        "w_check_mark",
+        "w_cross",
+        "w_so",
+        "w_therefore",
+        "w_final",
+        "w_boxed",
+        "w_hash",
+        "w_question_mark",
+        "w_not",
+        "w_each",
+        "w_total",
+        "w_remaining",
+        "w_per",
+        "w_step",
+        "w_bold",
+        "w_dollar",
+        "w_frac",
+        "w_times",
+        "w_percent",
+        "w_hour",
+        "w_half",
+        "w_dozen",
+        "w_interpret",
+        "w_alternatively",
+        "w_note",
+        "w_since",
+        "w_because",
+        "w_given",
+        "w_we_need",
+        "w_lets",
+        "w_x_var",
+        "w_equation",
+        "w_no",
+        "w_already",
+        "w_first",
+        "w_then",
+        "w_after",
+        "w_before",
+        "w_including",
+        "w_except"
+      ],
+      "selection_rule": "ridge strengths chosen by five-fold cross-validation on hard training questions; validation used only as a held-out check",
+      "train_cv_hard_by_seed": [
+        {
+          "correct": 1740,
+          "n": 2114,
+          "accuracy": 82.30842005676443
+        },
+        {
+          "correct": 1729,
+          "n": 2114,
+          "accuracy": 81.78807947019868
+        },
+        {
+          "correct": 1735,
+          "n": 2114,
+          "accuracy": 82.07190160832545
+        }
+      ],
+      "validation_hard": {
+        "correct": 299,
+        "n": 355,
+        "accuracy": 84.22535211267606
+      },
+      "validation_all": {
+        "correct": 742,
+        "n": 798,
+        "accuracy": 92.98245614035088
+      }
+    },
+    "validation_hard": {
+      "correct": 299,
+      "n": 355,
+      "accuracy": 84.22535211267606
+    },
+    "validation_all": {
+      "correct": 742,
+      "n": 798,
+      "accuracy": 92.98245614035088
+    },
+    "train_cv_hard_by_seed": [
+      {
+        "correct": 1740,
+        "n": 2114,
+        "accuracy": 82.30842005676443
+      },
+      {
+        "correct": 1729,
+        "n": 2114,
+        "accuracy": 81.78807947019868
+      },
+      {
+        "correct": 1735,
+        "n": 2114,
+        "accuracy": 82.07190160832545
+      }
+    ],
+    "train_cv_hard_total": 5204,
+    "train_cv_pattern_breakdown": {
+      "3-1": {
+        "n": 885,
+        "model_correct": 792,
+        "majority_correct": 742
+      },
+      "2-1-1": {
+        "n": 496,
+        "model_correct": 374,
+        "majority_correct": 320
+      },
+      "2-2": {
+        "n": 228,
+        "model_correct": 188,
+        "majority_correct": 117
+      },
+      "2-1": {
+        "n": 188,
+        "model_correct": 162,
+        "majority_correct": 140
+      },
+      "1-1-1-1": {
+        "n": 168,
+        "model_correct": 117,
+        "majority_correct": 47
+      },
+      "1-1-1": {
+        "n": 112,
+        "model_correct": 76,
+        "majority_correct": 36
+      },
+      "1-1": {
+        "n": 37,
+        "model_correct": 31,
+        "majority_correct": 11
+      }
+    },
+    "validation_pattern_breakdown": {
+      "3-1": {
+        "n": 151,
+        "model_correct": 134,
+        "majority_correct": 129
+      },
+      "2-1-1": {
+        "n": 88,
+        "model_correct": 70,
+        "majority_correct": 54
+      },
+      "2-2": {
+        "n": 34,
+        "model_correct": 30,
+        "majority_correct": 14
+      },
+      "2-1": {
+        "n": 28,
+        "model_correct": 25,
+        "majority_correct": 24
+      },
+      "1-1-1-1": {
+        "n": 20,
+        "model_correct": 14,
+        "majority_correct": 5
+      },
+      "1-1-1": {
+        "n": 20,
+        "model_correct": 15,
+        "majority_correct": 11
+      },
+      "1-1": {
+        "n": 14,
+        "model_correct": 11,
+        "majority_correct": 8
+      }
+    },
+    "disagreement_with_majority_on_hard_validation": {
+      "hard_questions_with_different_answers": 84,
+      "model_only_correct": 64,
+      "baseline_only_correct": 10,
+      "both_correct": 0,
+      "neither_correct": 10
+    },
+    "hard_validation_margin_bins": [
+      {
+        "margin_low": 0.003942702187199304,
+        "margin_high": 0.23584592157083528,
+        "correct": 71,
+        "n": 89,
+        "accuracy": 79.7752808988764
+      },
+      {
+        "margin_low": 0.23584592157083528,
+        "margin_high": 0.5807659672143557,
+        "correct": 74,
+        "n": 88,
+        "accuracy": 84.0909090909091
+      },
+      {
+        "margin_low": 0.5807659672143557,
+        "margin_high": 1.0999218208585921,
+        "correct": 75,
+        "n": 89,
+        "accuracy": 84.26966292134831
+      },
+      {
+        "margin_low": 1.0999218208585921,
+        "margin_high": 3.7164802950464075,
+        "correct": 79,
+        "n": 89,
+        "accuracy": 88.76404494382022
+      }
+    ]
+  },
+  "validation_cases": {
+    "model_fixes_majority": [
+      {
+        "id": "gsm8k:e0bce5638f28ceb61a610767278059aec4a642fdcd584761a2df8491c7ef6c46",
+        "question": "Jay went to watch a singer in a one hour 20 minutes concert.  If there was a 10-minute intermission, and all the songs were 5 minutes except for one song that lasted 10 minutes, how many songs did she sing?",
+        "reference_answer": "13",
+        "model_choice": 2,
+        "majority_choice": 0,
+        "candidates": [
+          {
+            "index": 0,
+            "parsed_answer": "16",
+            "ending": "and all songs except one lasted 5 minutes.\n\n- Total time of the concert: 1 hour 20 minutes = 90 minutes.\n- Intermission: 10 minutes.\n- Time spent singing: 90 - 10 = 80 minutes.\n- Number of songs: 80 / 5 = 16 songs.\n\n#### <numeric answer> 16"
+          },
+          {
+            "index": 1,
+            "parsed_answer": "14",
+            "ending": "e songs were **5 minutes** except for one song that lasted **10 minutes**.\n   - So, the total time for all songs is:\n     $$\n     70 = 6 \\times 10 + 10 = 70\n     $$\n   - Number of songs = $70 \\div 5 = 14$\n\n### Final Answer:\n$$\n\\boxed{14}\n$$"
+          },
+          {
+            "index": 2,
+            "parsed_answer": "13",
+            "ending": " songs is $ 5(x - 1) $ minutes.\n- The time for the **10-minute song** is 10 minutes.\n\nSo the total time is:\n\n$$\n5(x - 1) + 10 = 70\n$$\n\nSolving:\n\n$$\n5x - 5 + 10 = 70 \\\\\n5x + 5 = 70 \\\\\n5x = 65 \\\\\nx = 13\n$$\n\n### Final Answer:\n\n$$\n\\boxed{13}\n$$"
+          },
+          {
+            "index": 3,
+            "parsed_answer": "12",
+            "ending": "mber of songs**:  \n   The songs lasted 5 minutes except for one song that lasted 10 minutes. So, the total time is:  \n   $60 = 5 \\times 12 + 10$  \n   $60 = 60 + 10$ \u2705\n\n   Therefore, the number of songs is **12**.\n\n#### Final answer: **12**."
+          }
+        ]
+      },
+      {
+        "id": "gsm8k:8278949f5804b3684c922e60454437d60504a36370de6ec93d69445f5bfadb74",
+        "question": "Eddy\u2019s spider plant produces 2 baby plants 2 times a year.  After 4 years, how many baby plants will the mother plant have produced?",
+        "reference_answer": "16",
+        "model_choice": 1,
+        "majority_choice": 2,
+        "candidates": [
+          {
+            "index": 0,
+            "parsed_answer": "8",
+            "ending": "he number of baby plants per year\n- 2 baby plants per year.\n\n### Step 2: Multiply by the number of years\n- After 4 years:  \n  $ 2 \\text{ baby plants/year} \\times 4 \\text{ years} = 8 \\text{ baby plants} $\n\n### Final Answer:  \n$$\n\\boxed{8}\n$$"
+          },
+          {
+            "index": 1,
+            "parsed_answer": "16",
+            "ending": "ar, the plant produces 2 baby plants.\n- After 1 year: 2 baby plants  \n- After 2 years: 2 \u00d7 2 = 4 baby plants  \n- After 3 years: 2 \u00d7 4 = 8 baby plants  \n- After 4 years: 2 \u00d7 8 = **16 baby plants**\n\n### Final answer:\n\n#### <numeric answer> 16"
+          },
+          {
+            "index": 2,
+            "parsed_answer": "4",
+            "ending": "Eddy\u2019s spider plant produces 2 baby plants 2 times a year. After 4 years, the mother plant will have produced:\n\n$$\n2 \\text{ plants/year} \\times 2 \\text{ years} = \\boxed{4} \\text{ baby plants}\n$$\n\n#### <numeric answer> 4."
+          },
+          {
+            "index": 3,
+            "parsed_answer": "4",
+            "ending": "Eddy\u2019s spider plant produces 2 baby plants 2 times a year. After 4 years, the mother plant will have produced:\n\n$$\n2 \\text{ plants/year} \\times 2 \\text{ years} = \\boxed{4} \\text{ baby plants}\n$$\n\n#### <numeric answer> 4."
+          }
+        ]
+      },
+      {
+        "id": "gsm8k:b4dc0fdfacb68de5097fa404c8c8d455bd99dfbd4bbfb1d393dd5c04d7356c0f",
+        "question": "Tanika is selling boxes of crackers for her scout troop's fund-raiser. On Saturday, she sold 60 boxes. On Sunday, she sold 50% more than on Saturday. How many boxes did she sell, in total, over the two days?",
+        "reference_answer": "150",
+        "model_choice": 3,
+        "majority_choice": 0,
+        "candidates": [
+          {
+            "index": 0,
+            "parsed_answer": "90",
+            "ending": "* than Saturday, we calculate:\n\n$$\n50\\% \\text{ of } 60 = 0.5 \\times 60 = 30\n$$\n\nSo, she sold **30 more** boxes on Sunday than on Saturday.\n\n### Step 2: Add the boxes sold on both days\n\n$$\n60 + 30 = 90\n$$\n\n### Final Answer:\n\n$$\n\\boxed{90}\n$$"
+          },
+          {
+            "index": 1,
+            "parsed_answer": "90",
+            "ending": "of boxes sold on Sunday:\n   $$\n   50\\% \\text{ of } 60 = 0.5 \\times 60 = 30\n   $$\n   So, she sold **30 more boxes** on Sunday than Saturday.\n\n2. Total boxes sold over two days:\n   $$\n   60 + 30 = 90\n   $$\n\n**Final answer:**\n\n$$\n\\boxed{90}\n$$"
+          },
+          {
+            "index": 2,
+            "parsed_answer": "90",
+            "ending": "y sales\n50% more than 60 means:\n\n$$\n50\\% \\text{ of } 60 = 0.5 \\times 60 = 30\n$$\n\nSo, on Sunday, she sold **30 more boxes** than on Saturday.\n\n### Step 2: Add Saturday and Sunday sales\n\n$$\n60 + 30 = 90\n$$\n\n### Final answer:\n\n$$\n\\boxed{90}\n$$"
+          },
+          {
+            "index": 3,
+            "parsed_answer": "150",
+            "ending": "ore** than Saturday, we calculate:\n\n$$\n50\\% \\text{ of } 60 = 0.5 \\times 60 = 30\n$$\n\nSo, on Sunday, she sold:\n\n$$\n60 + 30 = 90 \\text{ boxes}\n$$\n\n### Step 2: Total sales over two days\n\n$$\n60 + 90 = 150\n$$\n\n### Final answer:\n\n$$\n\\boxed{150}\n$$"
+          }
+        ]
+      }
+    ],
+    "model_breaks_majority": [
+      {
+        "id": "gsm8k:4ba7df16b233b5dfee1e33cd5aacce9ff23be68fae0e800100b1d5652abc2ab6",
+        "question": "John takes 3 naps a week.  Each nap is 2 hours long.  In 70 days how many hours of naps does he take?",
+        "reference_answer": "60",
+        "model_choice": 1,
+        "majority_choice": 0,
+        "candidates": [
+          {
+            "index": 0,
+            "parsed_answer": "60",
+            "ending": "the total hours of naps in 70 days  \nSince there are **7 days in a week**, we divide the weekly naps by 7:\n\n$$\n\\frac{6 \\text{ hours/week}}{7 \\text{ days/week}} \\times 70 \\text{ days} = 60 \\text{ hours}\n$$\n\n### Final Answer:\n$$\n\\boxed{60}\n$$"
+          },
+          {
+            "index": 1,
+            "parsed_answer": "420",
+            "ending": "Number of naps per week**: 3  \n2. **Hours per nap**: 2  \n3. **Total hours per week**: $ 3 \\times 2 = 6 $ hours  \n4. **Total days**: 70  \n5. **Total hours in 70 days**: $ 6 \\times 70 = 420 $ hours\n\n### Final Answer:\n#### <numeric answer> 420"
+          },
+          {
+            "index": 2,
+            "parsed_answer": "420",
+            "ending": " is:  \n$$ 3 \\text{ naps/week} \\times 70 \\text{ days} = 210 \\text{ naps} $$\n\nEach nap is **2 hours**, so the total hours of naps is:  \n$$ 210 \\text{ naps} \\times 2 \\text{ hours/nap} = 420 \\text{ hours} $$\n\n### Final Answer:\n$$ \\boxed{420} $$"
+          },
+          {
+            "index": 3,
+            "parsed_answer": "60",
+            "ending": "**70 days**.\n\n- 3 naps per week \u00d7 2 hours per nap = **6 hours per week**\n- In 70 days, we can calculate the total hours as:\n\n$$\n6 \\text{ hours/week} \\times \\frac{70}{7} = 6 \\times 10 = 60 \\text{ hours}\n$$\n\n### Final Answer:\n$$\n\\boxed{60}\n$$"
+          }
+        ]
+      },
+      {
+        "id": "gsm8k:53720078a6bffa4e141a7bf22a1e6a86239cb349bca7fe908c4fbccd6c1bc290",
+        "question": "Jason and Jeremy want to paint their wall white and agreed to split the cost of the paint. A gallon of paint costs $45 and can cover up to 400 square feet. How much will each of them contribute to the cost of the paint if their walls have a total area of 1600 square feet and will need a second coat?",
+        "reference_answer": "180",
+        "model_choice": 2,
+        "majority_choice": 1,
+        "candidates": [
+          {
+            "index": 0,
+            "parsed_answer": null,
+            "ending": "d up to **7 gallons**\n\n### Step 3: Calculate cost per gallon\n\n- Cost per gallon: $45  \n- Total cost: 7 \u00d7 45 = $315\n\n### Step 4: Calculate cost per person\n\n- Each person contributes equally:  \n  $ \\frac{315}{2} = 157.5 $\n\n### Final Answer:\n\n"
+          },
+          {
+            "index": 1,
+            "parsed_answer": "180",
+            "ending": "ats**: 2 (since they need a second coat)  \n- **Total cost of paint**:  \n  $$\n  1600 \\times 0.1125 \\times 2 = 360 \\text{ dollars}\n  $$\n\nEach person contributes:  \n$$\n\\frac{360}{2} = 180 \\text{ dollars}\n$$\n\n### Final Answer:\n$$\n\\boxed{180}\n$$"
+          },
+          {
+            "index": 2,
+            "parsed_answer": "90",
+            "ending": "\n\n---\n\n### Step 3: Determine how much each person contributes\n\nSince the total cost is **$180**, and there are 2 people:\n\n$$\n\\text{Each person's contribution} = \\frac{180}{2} = 90 \\text{ dollars}\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{90}\n$$"
+          },
+          {
+            "index": 3,
+            "parsed_answer": "45",
+            "ending": "ons}\n$$\n\n---\n\n### Step 3: Calculate the cost of the paint\n\n$$\n2 \\text{ gallons} \\times \\$45 = \\$90\n$$\n\n---\n\n### Step 4: Split the cost equally between Jason and Jeremy\n\n$$\n\\frac{\\$90}{2} = \\$45\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{\\$45}\n$$"
+          }
+        ]
+      }
+    ]
+  },
+  "stage2_weights": {
+    "stage1_centered": 0.6796583667270162,
+    "agree": 0.48660374169962367,
+    "numeric_3": 0.42305074469065534,
+    "stage1_absolute": 0.33067506293232407,
+    "numeric_2": -0.23844403350986912,
+    "numeric_4": -0.23515671504318342,
+    "numeric_1": -0.22072829844260208,
+    "n_distinct_nums_centered": 0.18542941917823286,
+    "novel_frac_centered": 0.166971029434779,
+    "novel_unshared_count_centered": -0.1333542210519452,
+    "numeric_9": 0.12393284124020175,
+    "novel_unshared_count": -0.10605865408825702,
+    "ans_in_body_centered": -0.103324702388587,
+    "ans_count_in_text_centered": -0.09508904778462819,
+    "q_cov_centered": 0.08549414626242938,
+    "w_step_centered": -0.0833645603625923,
+    "eq_errors_any_centered": -0.08033468873895754,
+    "ans_in_body": -0.0791685683784046,
+    "ans_in_question_centered": 0.07208677627061805,
+    "n_distinct_nums": 0.06993656023718924,
+    "novel_jaccard_mean_centered": -0.06635579038164624,
+    "ans_is_last_num_centered": 0.0648903684784972,
+    "ans_count_in_text": -0.06286247377851112,
+    "eq_errors_any": -0.05638352476155355,
+    "w_approx_centered": -0.05433508325655532,
+    "w_hash_centered": -0.053264483270425364,
+    "novel_frac": 0.05318405937052505,
+    "has_question_restate_centered": 0.05236534718562257,
+    "w_step": -0.051683626247346355,
+    "numeric_7": -0.050220093673848665,
+    "ans_is_last_num": 0.04985516685194258,
+    "numeric_6": -0.049416805304284384,
+    "numeric_12": -0.04714360910377293,
+    "w_frac_centered": 0.046595962272030736,
+    "numeric_5": -0.044537197750660416,
+    "w_but_centered": -0.04408690338508365,
+    "numeric_0": -0.043528193509700844,
+    "ans_shared_cands_centered": -0.04269687694691045,
+    "ans_in_question": 0.03925769031320285,
+    "w_times_centered": 0.038342405242567386,
+    "w_hash": -0.03780878480743732,
+    "w_remaining_centered": 0.036983567580757465,
+    "numeric_13": 0.03643664053302059,
+    "numeric_11": -0.035037820091243704,
+    "n_boxed_centered": -0.03404352146437592,
+    "w_but": -0.033260452187745475,
+    "w_therefore_centered": -0.032331518972851886,
+    "w_total_centered": 0.029721512176953888,
+    "w_recheck_centered": -0.028269112496402123,
+    "len_rank_centered": -0.0270869424453245,
+    "len_rank": -0.027046429014092873,
+    "w_therefore": -0.02664755528479206,
+    "novel_jaccard_mean": -0.026040415534695792,
+    "w_given_centered": -0.025876067362132403,
+    "w_except_centered": -0.025660623257128933,
+    "w_approx": -0.025113156604236776,
+    "n_boxed": -0.02494960016590249,
+    "ans_shared_cands": -0.024324063929610666,
+    "w_boxed_centered": -0.02354001698893208,
+    "has_question_restate": 0.02347769152463213,
+    "q_cov": 0.023284500835813782,
+    "w_hour_centered": -0.02228043184325681,
+    "w_assume_centered": 0.02209872116244529,
+    "w_after_centered": -0.02131312171962704,
+    "numeric_8": -0.020357708781532192,
+    "w_before_centered": -0.019854154978483404,
+    "w_we_need_centered": -0.019493618268214868,
+    "w_frac": 0.019094541015067384,
+    "w_x_var_centered": 0.01862111798789163,
+    "w_already_centered": 0.018618908258634756,
+    "w_percent_centered": -0.01844907974176036,
+    "w_actually_centered": 0.01786541868432343,
+    "w_mistake_centered": 0.017607156333693995,
+    "w_boxed": -0.01726199318569799,
+    "w_assume": 0.01722472600863512,
+    "w_recheck": -0.017154247984504226,
+    "novel_shared_centered": -0.01678497367555278,
+    "w_total": 0.016530680130826196,
+    "w_half_centered": 0.016396962796570522,
+    "w_times": 0.016395583327730043,
+    "w_given": -0.01529952647302385,
+    "w_then_centered": 0.015245781874701535,
+    "w_bold_centered": -0.015127500885109831,
+    "n_sent_centered": 0.014802519818678847,
+    "w_we_need": -0.014800848612537276,
+    "w_actually": 0.014758939920041953,
+    "eq_errors_centered": 0.014424356928702026,
+    "w_remaining": 0.014289057866364033,
+    "eq_err_rate_centered": -0.014121926340034667,
+    "novel_shared": -0.013049765797644068,
+    "w_except": -0.012840820032113726,
+    "w_not_centered": -0.012299256064078085,
+    "w_wait_centered": 0.010605278626986759,
+    "eq_err_rate": -0.010383048975633975,
+    "w_bold": -0.010332480735197117,
+    "w_after": -0.01029920840567273,
+    "w_each_centered": -0.010202364209823876,
+    "eq_errors": 0.01003770447423979,
+    "w_note_centered": -0.0098849291167524,
+    "w_before": -0.00983932001637394,
+    "w_then": 0.009804405110515666,
+    "n_nums_centered": 0.009710962531426441,
+    "numeric_10": -0.009646832094894857,
+    "w_already": 0.009374308887448151,
+    "w_so_centered": 0.009104204101120807,
+    "w_x_var": 0.008990245711752151,
+    "n_sent": 0.008845945937484088,
+    "w_no_centered": 0.008051855945207855,
+    "n_eq_centered": 0.007768816010820264,
+    "w_including_centered": -0.007210101991567655,
+    "w_dozen_centered": 0.007159253989125054,
+    "w_alternatively_centered": 0.006890444545338376,
+    "w_not": -0.006797263499209671,
+    "w_since_centered": 0.006499949068719218,
+    "w_so": 0.006275332785181914,
+    "w_wait": 0.006169325957082137,
+    "w_mistake": 0.006079878104172786,
+    "w_per_centered": 0.005835893121755176,
+    "w_note": -0.005423350919360263,
+    "w_check_mark_centered": 0.005317668988703536,
+    "w_half": 0.00512635199253594,
+    "w_no": 0.005065661963149437,
+    "n_lines_centered": -0.0049042504133904,
+    "w_since": 0.004770280029888947,
+    "w_including": -0.004696808298418714,
+    "w_percent": -0.004601057473226174,
+    "w_interpret_centered": -0.004282929696789114,
+    "w_each": -0.004243696116642012,
+    "n_eq": 0.004139132985733018,
+    "novel_jaccard_max_centered": 0.004088958721595534,
+    "n_nums": 0.004072056443576311,
+    "n_hash_centered": -0.004061071703972235,
+    "w_check_mark": 0.0038594570292796015,
+    "w_interpret": -0.0034672172370834977,
+    "w_alternatively": 0.00344953092807052,
+    "w_hour": -0.003268236746618804,
+    "novel_jaccard_max": 0.0029037389903712094,
+    "rel_len": 0.002886084562258804,
+    "log_len_centered": 0.002886084562258804,
+    "rel_len_centered": 0.0028860845622587,
+    "n_hash": -0.0028715634285099334,
+    "w_per": 0.002685601788130802,
+    "n_lines": -0.0023979819666579572,
+    "w_dozen": 0.002133206094337131,
+    "w_first_centered": -0.0020161355625358227,
+    "w_lets_centered": 0.001856905004207377,
+    "w_dollar_centered": -0.0015072226991461768,
+    "w_final_centered": -0.0012992982959959105,
+    "w_lets": 0.0012239689661437615,
+    "log_len": 0.00121176010792915,
+    "w_dollar": -0.00111335560013289,
+    "w_equation_centered": -0.001108986178679709,
+    "w_question_mark_centered": -0.0009576349756710119,
+    "w_final": -0.0008784608418977654,
+    "w_first": -0.0008172439701739587,
+    "w_equation": -0.000777055654316076,
+    "w_question_mark": -0.0007700012099693246,
+    "w_however_centered": -0.0007527195733403193,
+    "w_however": -0.000615727720720648,
+    "w_because_centered": 0.00039687563704701294,
+    "w_because": 0.0002719232954353354,
+    "w_cross": 0.0,
+    "w_cross_centered": 0.0,
+    "numeric_14": 0.0,
+    "numeric_15": 0.0,
+    "numeric_16": 0.0
+  },
+  "asset_bytes": 31214,
+  "asset_sha256": {
+    "model.npz": "0bcdc98b832ae5a6aef0e408213fe79b01991a60a9f4f0e9718cb794a3f47555",
+    "config.json": "0069dbfb71ecde9ae42d229d3e77ae7bc8177478ff5c8130589cd66e619e93ef"
+  },
+  "training_seconds": 75.97952890396118
+}

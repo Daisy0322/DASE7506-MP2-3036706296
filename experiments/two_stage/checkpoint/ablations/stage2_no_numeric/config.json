@@ -1,0 +1,17 @@
+{
+  "seed": 0,
+  "ablation": "stage2_no_numeric",
+  "stage1_modes": [
+    "centered",
+    "absolute"
+  ],
+  "stage1_lambda": {
+    "centered": 0.1,
+    "absolute": 0.03
+  },
+  "stage2": true,
+  "stage2_blocks": [
+    "trace"
+  ],
+  "stage2_lambda": 0.03
+}

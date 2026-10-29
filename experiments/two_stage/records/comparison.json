@@ -1,0 +1,47 @@
+{
+  "description": "Honest comparison of the frozen submission (code/) and the two-stage experiment (experiments/two_stage/). Cross-validation refits every component inside each fold on the training split only; totals are over three fold assignments (seeds 0, 1, 2), 3 x 2114 hard training questions. Validation is the 355 hard validation questions. Test is the complete 467-question bank, scored once per frozen checkpoint with the official scorer.",
+  "hard_train_questions_per_seed": 2114,
+  "methods": {
+    "submission_linear_only": {
+      "what": "code/ pipeline, pairwise least-squares ridge on centered embedding + agreement, lambda 1 (code/checkpoint/ablations/embed_agree)",
+      "train_cv_hard_by_seed": [1713, 1710, 1702],
+      "train_cv_hard_total": 5125,
+      "validation_hard": 297,
+      "test": 381
+    },
+    "submission_linear_plus_numeric_residual": {
+      "what": "code/ pipeline with the in-sample numeric-answer residual, scale 0.5, no checks",
+      "train_cv_hard_by_seed": [1725, 1709, 1706],
+      "train_cv_hard_total": 5140,
+      "validation_hard": 302,
+      "test": null
+    },
+    "submission_full": {
+      "what": "code/checkpoint/model_bundle: linear + numeric residual + arithmetic penalty 0.2 + expression-coverage override (prototype residual omitted in CV; it changed no test choice's correctness)",
+      "train_cv_hard_by_seed": [1712, 1703, 1698],
+      "train_cv_hard_total": 5113,
+      "validation_hard": 307,
+      "test": 391
+    },
+    "two_stage_stage1_centered": {
+      "what": "experiments/two_stage/checkpoint/ablations/stage1_centered: pairwise logistic ridge on centered embedding + agreement, lambda 0.1",
+      "train_cv_hard_by_seed": [1724, 1707, 1709],
+      "train_cv_hard_total": 5140,
+      "validation_hard": 295,
+      "test": 380
+    },
+    "two_stage_full": {
+      "what": "experiments/two_stage/checkpoint/model_bundle: stage-1 centered + absolute logistic rankers, stage-2 logistic on out-of-fold stage-1 scores, 73 trace features (raw and within-question centered), 17 numeric-answer features",
+      "train_cv_hard_by_seed": [1740, 1729, 1735],
+      "train_cv_hard_total": 5204,
+      "validation_hard": 299,
+      "test": 385
+    }
+  },
+  "notes": [
+    "The validation numbers of the submission pipeline were used to choose its numeric scale, penalty and coverage settings, so they are optimistic; the two-stage validation numbers were not used for any choice.",
+    "Stage 2 adds +64 hard training questions over three seeds in cross-validation (about 1.0 point) and +5 test questions (380 -> 385, about 1.1 points): the stage-2 gain transfers as predicted.",
+    "The submission's numeric residual, penalty and coverage override add +10 test questions (381 -> 391) but -12 in cross-validation (5125 -> 5113). Cross-validation does not support that gain; it is within the sampling noise of a 467-question bank.",
+    "Difference between 391 and 385 on 467 questions is 6 questions. The two frozen selectors choose a different final number on 48 test questions (a different candidate index on 108); with 48 discordant questions the standard error of the difference in correct counts is about 6 questions, so the gap is within sampling noise."
+  ]
+}

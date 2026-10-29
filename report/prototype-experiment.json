@@ -1,0 +1,54 @@
+{
+  "selection_data": [
+    "train five-fold out-of-fold",
+    "validation hard subset"
+  ],
+  "test_used_for_selection": false,
+  "hard_train_questions": 2114,
+  "hard_validation_questions": 355,
+  "frozen_pipeline_baseline": {
+    "train_five_fold_correct": 1704,
+    "validation_hard_correct": 306
+  },
+  "prototype_clusters": 32,
+  "prototype_lambda_rel": 0.1,
+  "scale_grid": [
+    {
+      "scale": 0.1,
+      "train_five_fold_correct": 1706,
+      "validation_hard_correct": 306
+    },
+    {
+      "scale": 0.125,
+      "train_five_fold_correct": 1705,
+      "validation_hard_correct": 306
+    },
+    {
+      "scale": 0.15,
+      "train_five_fold_correct": 1705,
+      "validation_hard_correct": 306
+    },
+    {
+      "scale": 0.175,
+      "train_five_fold_correct": 1705,
+      "validation_hard_correct": 307
+    },
+    {
+      "scale": 0.2,
+      "train_five_fold_correct": 1704,
+      "validation_hard_correct": 307
+    },
+    {
+      "scale": 0.225,
+      "train_five_fold_correct": 1703,
+      "validation_hard_correct": 307
+    },
+    {
+      "scale": 0.25,
+      "train_five_fold_correct": 1704,
+      "validation_hard_correct": 307
+    }
+  ],
+  "chosen_scale": 0.175,
+  "selection_rule": "Choose the smallest tested scale that strictly improves both frozen-pipeline metrics."
+}

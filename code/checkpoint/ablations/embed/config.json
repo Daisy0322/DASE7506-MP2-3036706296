@@ -1,0 +1,19 @@
+{
+  "seed": 0,
+  "method": "embed",
+  "embedding": "centered",
+  "scalars": [],
+  "lambda_rel": 10.0,
+  "n_train_pairs": 8271,
+  "dimensions": 1024,
+  "validation_hard": {
+    "correct": 282,
+    "n": 355,
+    "accuracy": 79.43661971830986
+  },
+  "validation_all": {
+    "correct": 725,
+    "n": 798,
+    "accuracy": 90.85213032581454
+  }
+}

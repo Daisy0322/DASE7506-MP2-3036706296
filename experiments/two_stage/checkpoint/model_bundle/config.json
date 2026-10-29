@@ -1,0 +1,123 @@
+{
+  "seed": 0,
+  "method": "two-stage pairwise logistic ranker",
+  "stage1_modes": [
+    "centered",
+    "absolute"
+  ],
+  "stage1_lambda": {
+    "centered": 0.1,
+    "absolute": 0.03
+  },
+  "stage2": true,
+  "stage2_blocks": [
+    "trace",
+    "numeric"
+  ],
+  "stage2_lambda": 0.03,
+  "stage2_dimensions": 166,
+  "stage2_n_pairs": 6516,
+  "trace_feature_names": [
+    "log_len",
+    "rel_len",
+    "len_rank",
+    "n_nums",
+    "n_distinct_nums",
+    "q_cov",
+    "novel_frac",
+    "novel_shared",
+    "novel_unshared_count",
+    "novel_jaccard_mean",
+    "novel_jaccard_max",
+    "eq_errors",
+    "eq_errors_any",
+    "n_eq",
+    "eq_err_rate",
+    "ans_in_body",
+    "ans_in_question",
+    "ans_shared_cands",
+    "ans_is_last_num",
+    "ans_count_in_text",
+    "n_boxed",
+    "n_hash",
+    "n_lines",
+    "n_sent",
+    "has_question_restate",
+    "w_wait",
+    "w_but",
+    "w_however",
+    "w_actually",
+    "w_recheck",
+    "w_mistake",
+    "w_assume",
+    "w_approx",
+    "w_check_mark",
+    "w_cross",
+    "w_so",
+    "w_therefore",
+    "w_final",
+    "w_boxed",
+    "w_hash",
+    "w_question_mark",
+    "w_not",
+    "w_each",
+    "w_total",
+    "w_remaining",
+    "w_per",
+    "w_step",
+    "w_bold",
+    "w_dollar",
+    "w_frac",
+    "w_times",
+    "w_percent",
+    "w_hour",
+    "w_half",
+    "w_dozen",
+    "w_interpret",
+    "w_alternatively",
+    "w_note",
+    "w_since",
+    "w_because",
+    "w_given",
+    "w_we_need",
+    "w_lets",
+    "w_x_var",
+    "w_equation",
+    "w_no",
+    "w_already",
+    "w_first",
+    "w_then",
+    "w_after",
+    "w_before",
+    "w_including",
+    "w_except"
+  ],
+  "selection_rule": "ridge strengths chosen by five-fold cross-validation on hard training questions; validation used only as a held-out check",
+  "train_cv_hard_by_seed": [
+    {
+      "correct": 1740,
+      "n": 2114,
+      "accuracy": 82.30842005676443
+    },
+    {
+      "correct": 1729,
+      "n": 2114,
+      "accuracy": 81.78807947019868
+    },
+    {
+      "correct": 1735,
+      "n": 2114,
+      "accuracy": 82.07190160832545
+    }
+  ],
+  "validation_hard": {
+    "correct": 299,
+    "n": 355,
+    "accuracy": 84.22535211267606
+  },
+  "validation_all": {
+    "correct": 742,
+    "n": 798,
+    "accuracy": 92.98245614035088
+  }
+}

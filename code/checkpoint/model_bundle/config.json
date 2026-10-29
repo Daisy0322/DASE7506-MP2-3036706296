@@ -1,0 +1,55 @@
+{
+  "seed": 0,
+  "method": "embed_agree",
+  "embedding": "centered",
+  "scalars": [
+    "agree",
+    "parseable"
+  ],
+  "lambda_rel": 1.0,
+  "n_train_pairs": 8271,
+  "dimensions": 1026,
+  "selection_rule": "simplest feature set within one hard-validation question of the best score; numeric-answer residual, semantic-prototype residual, arithmetic penalty and expression-coverage override then chosen on hard validation",
+  "validation_hard": {
+    "correct": 297,
+    "n": 355,
+    "accuracy": 83.66197183098592
+  },
+  "validation_all": {
+    "correct": 740,
+    "n": 798,
+    "accuracy": 92.73182957393483
+  },
+  "numeric_residual_lambda_rel": 0.01,
+  "numeric_residual_scale": 0.5,
+  "numeric_validation_hard": {
+    "correct": 302,
+    "n": 355,
+    "accuracy": 85.07042253521126
+  },
+  "numeric_validation_all": {
+    "correct": 745,
+    "n": 798,
+    "accuracy": 93.35839598997494
+  },
+  "prototype_clusters": 32,
+  "prototype_lambda_rel": 0.1,
+  "prototype_scale": 0.175,
+  "prototype_train_cv_hard": {
+    "correct": 1705,
+    "n": 2114
+  },
+  "arithmetic_penalty": 0.2,
+  "coverage_min": 4,
+  "coverage_margin": 0.2,
+  "final_validation_hard": {
+    "correct": 307,
+    "n": 355,
+    "accuracy": 86.47887323943662
+  },
+  "final_validation_all": {
+    "correct": 750,
+    "n": 798,
+    "accuracy": 93.98496240601504
+  }
+}
